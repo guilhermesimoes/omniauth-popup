@@ -1,0 +1,23 @@
+<h1>Users Index</h1>
+
+<table class='users-table'>
+  <tr>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Provider</th>
+    <th>UId</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= image_tag user.image %></td>
+    <td><%= user.name %></td>
+    <td><%= user.provider %></td>
+    <td><%= user.uid %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Destroy', user_path(user), method: :delete, confirm: 'Are you sure?' %></td>
+  </tr>
+<% end %>
+</table>

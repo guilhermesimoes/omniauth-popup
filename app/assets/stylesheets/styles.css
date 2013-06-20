@@ -1,0 +1,84 @@
+body {
+  background-image: url('bg.png');
+  background-attachment: fixed;
+  font-size: 16px;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  color: #EEEEEE;
+}
+
+header h1 {
+  text-align: center;
+}
+
+header h1 a {
+  text-decoration: none;
+}
+
+.user-nav {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 15px;
+}
+
+.user-nav ul {
+  list-style-type: none;
+}
+
+.user-nav li {
+  /* display: inline-block; */
+  padding: 10px 20px;
+}
+
+.user-nav .user-pic {
+  vertical-align: middle;
+  margin: 0 4px 3px 0;
+  height: 24px;
+  width: 24px;
+  border: 1px solid black;
+}
+
+.messages {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+.messages .message {
+  padding: 8px 18px 8px 10px;
+  white-space: nowrap;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 16px;
+  line-height: 36px;
+}
+
+.messages .error,
+.messages .alert {
+  color: #3A0003;
+  border-color: #3A0003;
+  background-color: #FFBABA;
+}
+
+.messages .notice {
+  color: #1E3A00;
+  border-color: #1E3A00;
+  background-color: #BBFFB6;
+}
+
+.content {
+  padding: 20px 0 0 50px;
+}
+
+.users-table {
+  border-spacing: 20px;
+}
+
+.users-table th {
+  text-align: left;
+}
+
+a {
+  color: #EEEEEE;
+}

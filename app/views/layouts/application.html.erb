@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Omniauth Popup</title>
+  <%= stylesheet_link_tag    'application' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header class='main'>
+    <h1><%= link_to 'Omniauth Popup', root_path %></h1>
+    <nav class='user-nav'>
+      <ul>
+        <% if current_user %>
+          <li>
+            <%= link_to current_user do %>
+              <%= image_tag current_user.image, class: 'user-pic' if current_user.image %>
+              <%= content_tag :span, current_user.name %>
+            <% end %>
+          </li>
+          <li><%= link_to 'Log out', sign_out_path %></li>
+        <% else %>
+          <li><%= link_to 'Log in with Facebook', '/auth/facebook', class: 'js-popup', data: { width: '660', height: '330' } %></li>
+          <li><%= link_to 'Log in with Google', '/auth/google_oauth2', class: 'js-popup', data: { width: '800', height: '470' } %></li>
+          <li><%= link_to 'Log in with Twitter', '/auth/twitter', class: 'js-popup', data: { width: '660', height: '710' } %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </header>
+
+  <div id='js-messages' class='messages'>
+    <% flash.each do |type, message| %>
+      <span class='message <%= type %>'>
+        <%= message %>
+      </span>
+    <% end %>
+  </div>
+
+  <div class='content'>
+    <%= yield %>
+  </div>
+</body>
+</html>
