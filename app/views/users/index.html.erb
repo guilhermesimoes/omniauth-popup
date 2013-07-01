@@ -1,11 +1,11 @@
-<h1>Users Index</h1>
+<h1><%= t('.title') %></h1>
 
 <table class='users-table'>
   <tr>
-    <th>Image</th>
-    <th>Name</th>
-    <th>Provider</th>
-    <th>UId</th>
+    <th><%= User.human_attribute_name(:image) %></th>
+    <th><%= User.human_attribute_name(:name) %></th>
+    <th><%= User.human_attribute_name(:provider) %></th>
+    <th><%= User.human_attribute_name(:uid) %></th>
     <th></th>
     <th></th>
   </tr>
@@ -16,8 +16,8 @@
     <td><%= user.name %></td>
     <td><%= user.provider %></td>
     <td><%= user.uid %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Destroy', user_path(user), method: :delete, confirm: 'Are you sure?' %></td>
+    <td><%= link_to t('.show_link'), user %></td>
+    <td><%= link_to t('.destroy_link.text'), user_path(user), method: :delete, confirm: t('.destroy_link.confirm') %></td>
   </tr>
 <% end %>
 </table>

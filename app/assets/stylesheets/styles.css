@@ -14,6 +14,23 @@ header h1 a {
   text-decoration: none;
 }
 
+.lang-nav {
+  position: absolute;
+  top: 30px;
+  left: 55px;
+  font-size: 15px;
+}
+
+.lang-items {
+  list-style-type: none;
+  display: inline;
+  padding: 0;
+}
+
+.lang-item {
+  display: inline;
+}
+
 .user-nav {
   position: absolute;
   top: 15px;

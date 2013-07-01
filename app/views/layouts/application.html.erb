@@ -9,6 +9,13 @@
 <body>
   <header class='main'>
     <h1><%= link_to 'Omniauth Popup', root_path %></h1>
+    <nav class='lang-nav'>
+      <span><%= t('.language') %>:</span>
+      <ul class='lang-items'>
+        <li class='lang-item'><%= link_to_unless_current 'English', locale: 'en' %></li>
+        <li class='lang-item'><%= link_to_unless_current 'Português', locale: 'pt' %></li>
+      </ul>
+    </nav>
     <nav class='user-nav'>
       <ul>
         <% if current_user %>
@@ -18,11 +25,11 @@
               <%= content_tag :span, current_user.name %>
             <% end %>
           </li>
-          <li><%= link_to 'Log out', sign_out_path %></li>
+          <li><%= link_to t('.logout_link'), sign_out_path %></li>
         <% else %>
-          <li><%= link_to 'Log in with Facebook', '/auth/facebook', class: 'js-popup', data: { width: '660', height: '330' } %></li>
-          <li><%= link_to 'Log in with Google', '/auth/google_oauth2', class: 'js-popup', data: { width: '800', height: '470' } %></li>
-          <li><%= link_to 'Log in with Twitter', '/auth/twitter', class: 'js-popup', data: { width: '660', height: '710' } %></li>
+          <li><%= link_to t('.login_with_link', provider: 'Facebook'), '/auth/facebook', class: 'js-popup', data: { width: '660', height: '330' } %></li>
+          <li><%= link_to t('.login_with_link', provider: 'Google'), '/auth/google_oauth2', class: 'js-popup', data: {width: '800', height: '470' } %></li>
+          <li><%= link_to t('.login_with_link', provider: 'Twitter'), '/auth/twitter', class: 'js-popup', data: { width: '660', height: '710' } %></li>
         <% end %>
       </ul>
     </nav>

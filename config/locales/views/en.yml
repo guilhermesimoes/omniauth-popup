@@ -1,0 +1,21 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  layouts:
+    application:
+      language: Language
+      logout_link: Log out
+      login_with_link: Log in with %{provider}
+  pages:
+    home:
+      users_link: Users Index
+  users:
+    show:
+      link_to_back: Back
+    index:
+      title: Users Index
+      show_link: Show
+      destroy_link:
+        text: Destroy
+        confirm: Are you sure?

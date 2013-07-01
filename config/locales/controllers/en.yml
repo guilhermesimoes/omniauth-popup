@@ -1,0 +1,15 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  controllers:
+    users:
+      destroy:
+        notice: User destroyed.
+    sessions:
+      create:
+        notice: Successfully authenticated with %{provider}.
+      destroy:
+        notice: Signed out!
+      failure:
+        alert: "Sorry, you didn't authorize logging in with %{provider}."

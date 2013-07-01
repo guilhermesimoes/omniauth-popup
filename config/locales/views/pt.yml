@@ -1,0 +1,21 @@
+# encoding: UTF-8
+
+
+pt:
+  layouts:
+    application:
+      language: Idioma
+      logout_link: Sair
+      login_with_link: Iniciar sessão com %{provider}
+  pages:
+    home:
+      users_link: Lista de Utilizadores
+  users:
+    show:
+      link_to_back: Voltar atrás
+    index:
+      title: Lista de Utilizadores
+      show_link: Mostrar
+      destroy_link:
+        text: Apagar
+        confirm: Tens a certeza?

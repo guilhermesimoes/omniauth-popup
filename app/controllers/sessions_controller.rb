@@ -4,14 +4,14 @@ class SessionsController < ApplicationController
     omniauth = env['omniauth.auth']
     user = User.find_or_create_with_omniauth(omniauth)
     session[:user_id] = user.id
-    flash[:notice] = "Successfully authenticated with #{provider_name(omniauth.provider)}."
+    flash[:notice] = t('controllers.sessions.create.notice', provider: provider_name(omniauth.provider))
     popup = env['omniauth.params']['popup']
     next_page = session.delete(:origin) || env['omniauth.origin']
     render_or_redirect(next_page, popup)
   end
 
   def failure
-    flash[:alert] = "Sorry, you didn't authorize logging in with #{provider_name(params[:strategy])}."
+    flash[:alert] = t('controllers.sessions.failure.alert', provider: provider_name(params[:strategy]))
     # We should be using env['omniauth.params']['popup'] but Omniauth fails
     # on failure so we have to add the on_failure hook in the omniauth.rb file
     popup = params[:popup]
@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_url, notice: 'Signed out!'
+    redirect_to root_url, notice: t('controllers.sessions.destroy.notice')
   end
 
   protected

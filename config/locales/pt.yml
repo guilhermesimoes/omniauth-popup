@@ -1,0 +1,11 @@
+# encoding: UTF-8
+
+
+pt:
+  activerecord:
+    attributes:
+      user:
+        name: Nome
+        image: Imagem
+        provider: Autenticador
+        uid: Nº Identifição
