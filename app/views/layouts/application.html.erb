@@ -27,9 +27,9 @@
           </li>
           <li><%= link_to t('.logout_link'), sign_out_path %></li>
         <% else %>
-          <li><%= link_to t('.login_with_link', provider: 'Facebook'), '/auth/facebook', class: 'js-popup', data: { width: '660', height: '330' } %></li>
-          <li><%= link_to t('.login_with_link', provider: 'Google'), '/auth/google', class: 'js-popup', data: {width: '800', height: '470' } %></li>
-          <li><%= link_to t('.login_with_link', provider: 'Twitter'), '/auth/twitter', class: 'js-popup', data: { width: '660', height: '710' } %></li>
+          <li><%= link_to_login_with 'Facebook', '/auth/facebook', { width: '660', height: '330' } %></li>
+          <li><%= link_to_login_with 'Google', '/auth/google', { width: '800', height: '470' } %></li>
+          <li><%= link_to_login_with 'Twitter', '/auth/twitter', { width: '660', height: '710' } %></li>
         <% end %>
       </ul>
     </nav>

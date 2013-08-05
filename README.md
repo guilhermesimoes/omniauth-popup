@@ -4,7 +4,9 @@ A simple example of how you could setup a pure OmniAuth login using a popup wind
 
 ## Code flow
 
-There are 5 steps involved:
+There are 6 steps involved:
+
+* application_helper.rb - A useful function that helps simplify the view. It adds a css class to be later used as a selector and adds some data attributes that determine the size of the popup.
 
 * application.html.erb - The user clicks some "Login with Social Provider" button.
 
