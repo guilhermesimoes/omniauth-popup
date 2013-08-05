@@ -6,7 +6,8 @@ $(document).ready(function() {
 });
 
 function centerPopup(linkUrl, width, height) {
-    var url = linkUrl + '?popup=true';
+    var sep = (linkUrl.indexOf('?') != -1) ? '&' : '?';
+    var url = linkUrl + sep + 'popup=true';
     var left = (screen.width - width) / 2 - 16;
     var top = (screen.height - height) / 2 - 50;
     var windowFeatures = 'menubar=no,toolbar=no,status=no,width=' + width +
