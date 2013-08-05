@@ -7,7 +7,7 @@ gem 'omniauth', '~> 1.1.4'
 gem 'omniauth-facebook', '~> 1.4.1'
 gem 'omniauth-github', '~> 1.1.1'
 gem 'omniauth-google-oauth2', '~> 0.1.19'
-gem 'omniauth-twitter', '~> 1.0.0'
+gem 'omniauth-twitter', '~> 1.0.1'
 
 gem 'figaro', '~> 0.7.0'
 
