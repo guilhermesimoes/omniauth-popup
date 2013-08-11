@@ -12,6 +12,15 @@ Rails.application.config.middleware.use OmniAuth::Builder do
       }
     }
 
+  provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET'],
+    {
+      client_options: {
+        ssl: {
+          ca_file: Rails.root.join('lib', 'assets', 'cacert.pem').to_s
+        }
+      }
+    }
+
   provider :google_oauth2, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET'],
     {
       name: 'google',

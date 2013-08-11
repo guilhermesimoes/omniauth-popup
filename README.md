@@ -34,6 +34,8 @@ Finally, start a web server on port 3000 with:
 
 * Create your Facebook app [here](https://developers.facebook.com/apps)
 
+* Create your GitHub app [here](https://github.com/settings/applications/new)
+
 * Create your Google app [here](https://code.google.com/apis/console)
 
 * Create your Twitter app [here](https://dev.twitter.com/apps)

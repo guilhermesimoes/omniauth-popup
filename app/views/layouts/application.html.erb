@@ -28,6 +28,7 @@
           <li><%= link_to t('.logout_link'), sign_out_path %></li>
         <% else %>
           <li><%= link_to_login_with 'Facebook', '/auth/facebook', { width: '660', height: '330' } %></li>
+          <li><%= link_to_login_with 'GitHub', '/auth/github', { width: '1050', height: '700' } %></li>
           <li><%= link_to_login_with 'Google', '/auth/google', { width: '800', height: '470' } %></li>
           <li><%= link_to_login_with 'Twitter', '/auth/twitter', { width: '660', height: '710' } %></li>
         <% end %>

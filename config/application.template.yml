@@ -8,6 +8,10 @@ SECRET_TOKEN: 'CLASSIFIED'
 FACEBOOK_KEY: 'CLASSIFIED'
 FACEBOOK_SECRET: 'CLASSIFIED'
 
+# Create your github app at https://github.com/settings/applications/new
+GITHUB_KEY: 'CLASSIFIED'
+GITHUB_SECRET: 'CLASSIFIED'
+
 # Create your google app at https://code.google.com/apis/console
 GOOGLE_KEY: 'CLASSIFIED'
 GOOGLE_SECRET: 'CLASSIFIED'
