@@ -22,7 +22,7 @@ There are 6 steps involved:
 
 First, install all the required gems with:
 
-    bundle install
+    bundle install --without production
 
 Then follow the instructions on the file `application.template.yml` located in the `config/initializers` directory.
 
