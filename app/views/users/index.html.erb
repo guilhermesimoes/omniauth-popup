@@ -17,7 +17,7 @@
     <td><%= user.provider %></td>
     <td><%= user.uid %></td>
     <td><%= link_to t('.show_link'), user %></td>
-    <td><%= link_to t('.destroy_link.text'), user_path(user), method: :delete, confirm: t('.destroy_link.confirm') %></td>
+    <td><%= link_to t('.destroy_link.text'), user_path(user), method: :delete, data: { confirm: t('.destroy_link.confirm') } %></td>
   </tr>
 <% end %>
 </table>

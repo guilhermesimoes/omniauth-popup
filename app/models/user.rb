@@ -1,8 +1,6 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :provider, :uid
-
   def self.find_or_create_with_omniauth(auth)
-    user = User.find_by_provider_and_uid(auth.provider, auth.uid)
+    user = User.find_by(:provider => auth.provider, :uid => auth.uid)
     if user
       user.update_info(auth)
     else

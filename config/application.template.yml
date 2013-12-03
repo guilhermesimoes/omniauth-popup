@@ -2,20 +2,23 @@
 # It must not be checked into source control.
 
 # Generate a secret token with the `rake secret` command
-SECRET_TOKEN: 'CLASSIFIED'
+SECRET_TOKEN: CLASSIFIED
+
+# Generate a secret token with the `rake secret` command
+SECRET_KEY_BASE: CLASSIFIED
 
 # Create your facebook app at https://developers.facebook.com/apps
-FACEBOOK_KEY: 'CLASSIFIED'
-FACEBOOK_SECRET: 'CLASSIFIED'
+FACEBOOK_KEY: CLASSIFIED
+FACEBOOK_SECRET: CLASSIFIED
 
 # Create your github app at https://github.com/settings/applications/new
-GITHUB_KEY: 'CLASSIFIED'
-GITHUB_SECRET: 'CLASSIFIED'
+GITHUB_KEY: CLASSIFIED
+GITHUB_SECRET: CLASSIFIED
 
 # Create your google app at https://code.google.com/apis/console
-GOOGLE_KEY: 'CLASSIFIED'
-GOOGLE_SECRET: 'CLASSIFIED'
+GOOGLE_KEY: CLASSIFIED
+GOOGLE_SECRET: CLASSIFIED
 
 # Create your twitter app at https://dev.twitter.com/apps
-TWITTER_KEY: 'CLASSIFIED'
-TWITTER_SECRET: 'CLASSIFIED'
+TWITTER_KEY: CLASSIFIED
+TWITTER_SECRET: CLASSIFIED
