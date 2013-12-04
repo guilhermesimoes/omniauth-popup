@@ -10,6 +10,6 @@ OmniauthPopup::Application.routes.draw do
     root to: 'pages#home'
   end
 
-  match '*path' => redirect("/#{I18n.default_locale}/%{path}")
-  match '' => redirect("/#{I18n.default_locale}")
+  get '*path' => redirect("/#{I18n.default_locale}/%{path}")
+  get '' => redirect("/#{I18n.default_locale}")
 end
