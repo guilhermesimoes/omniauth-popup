@@ -4,12 +4,8 @@
 en:
   controllers:
     users:
-      destroy:
-        notice: User destroyed.
+      destroy: User destroyed.
     sessions:
-      create:
-        notice: Successfully authenticated with %{provider}.
-      destroy:
-        notice: Signed out!
-      failure:
-        alert: "Sorry, you didn't authorize logging in with %{provider}."
+      create: Successfully authenticated with %{provider}.
+      destroy: Signed out!
+      failure: "Sorry, you didn't authorize logging in with %{provider}."

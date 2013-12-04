@@ -4,12 +4,8 @@
 pt:
   controllers:
     users:
-      destroy:
-        notice: Utilizador apagado.
+      destroy: Utilizador apagado.
     sessions:
-      create:
-        notice: Autenticado com sucesso pelo %{provider}.
-      destroy:
-        notice: Sessão terminada!
-      failure:
-        alert: Não autorizaste a autenticação pelo %{provider}.
+      create: Autenticado com sucesso pelo %{provider}.
+      destroy: Sessão terminada!
+      failure: Não autorizaste a autenticação pelo %{provider}.

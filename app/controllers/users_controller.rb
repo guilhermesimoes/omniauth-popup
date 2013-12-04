@@ -23,6 +23,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     session[:user_id] = nil if session[:user_id] == @user.id
     @user.destroy
-    redirect_to root_url, notice: t('controllers.users.destroy.notice')
+    redirect_to root_url, notice: t('controllers.users.destroy')
   end
 end
