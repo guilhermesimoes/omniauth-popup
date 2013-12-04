@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     session[:user_id] = user.id
     flash[:notice] = t('controllers.sessions.create', provider: pretty_name(omniauth.provider))
     popup = env['omniauth.params']['popup']
-    next_page = session.delete(:origin) || env['omniauth.origin']
+    next_page = env['omniauth.origin']
     render_or_redirect(next_page, popup)
   end
 

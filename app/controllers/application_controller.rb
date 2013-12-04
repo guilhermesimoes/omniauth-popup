@@ -26,8 +26,11 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     if !current_user
-      session[:origin] = request.fullpath
-      redirect_to '/auth/twitter'
+      # Example of forcing authentication with a certain provider.
+      # Be aware of malicious redirects though.
+      # http://blog.codeclimate.com/blog/2013/03/27/rails-insecure-defaults/#offsite-redirects
+      origin = URI.parse(request.fullpath).path
+      redirect_to "/auth/twitter?origin=#{origin}"
     end
   end
 end
