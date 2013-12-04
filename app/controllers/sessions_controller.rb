@@ -12,10 +12,8 @@ class SessionsController < ApplicationController
 
   def failure
     flash[:alert] = t('controllers.sessions.failure', provider: pretty_name(env['omniauth.error.strategy'].name))
-    # We should be using env['omniauth.params']['popup'] but Omniauth fails
-    # on failure so we have to add the on_failure hook in the omniauth.rb file
-    popup = params[:popup]
-    previous_page = params[:origin]
+    popup = env['omniauth.params']['popup']
+    previous_page = env['omniauth.origin']
     render_or_redirect(previous_page, popup)
   end
 
