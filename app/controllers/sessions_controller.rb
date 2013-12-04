@@ -5,16 +5,12 @@ class SessionsController < ApplicationController
     user = User.find_or_create_with_omniauth(omniauth)
     session[:user_id] = user.id
     flash[:notice] = t('controllers.sessions.create', provider: pretty_name(omniauth.provider))
-    popup = env['omniauth.params']['popup']
-    next_page = env['omniauth.origin']
-    render_or_redirect(next_page, popup)
+    render_or_redirect
   end
 
   def failure
     flash[:alert] = t('controllers.sessions.failure', provider: pretty_name(env['omniauth.error.strategy'].name))
-    popup = env['omniauth.params']['popup']
-    previous_page = env['omniauth.origin']
-    render_or_redirect(previous_page, popup)
+    render_or_redirect
   end
 
   def destroy
@@ -24,8 +20,9 @@ class SessionsController < ApplicationController
 
   protected
 
-  def render_or_redirect(page, popup)
-    if popup
+  def render_or_redirect
+    page = env['omniauth.origin']
+    if env['omniauth.params']['popup']
       @page = page
       render 'callback', layout: false
     else
