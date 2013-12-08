@@ -18,6 +18,7 @@ gem 'thin', '~> 1.6.1'
 
 group :production do
   gem 'pg', '~> 0.17.0'
+  gem 'rails_12factor'
 end
 
 group :development, :test do
