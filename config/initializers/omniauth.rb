@@ -14,6 +14,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 
   provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET'],
     {
+      scope: 'user:email',
       client_options: {
         ssl: {
           ca_file: Rails.root.join('lib', 'assets', 'cacert.pem').to_s

@@ -6,11 +6,11 @@ $(document).ready(function() {
 });
 
 function centerPopup(linkUrl, width, height) {
-    var sep = (linkUrl.indexOf('?') != -1) ? '&' : '?';
-    var url = linkUrl + sep + 'popup=true';
-    var left = (screen.width - width) / 2 - 16;
-    var top = (screen.height - height) / 2 - 50;
-    var windowFeatures = 'menubar=no,toolbar=no,status=no,width=' + width +
-        ',height=' + height + ',left=' + left + ',top=' + top;
+    var sep = (linkUrl.indexOf('?') != -1) ? '&' : '?',
+        url = linkUrl + sep + 'popup=true',
+        left = (screen.width - width) / 2 - 16,
+        top = (screen.height - height) / 2 - 50,
+        windowFeatures = 'menubar=no,toolbar=no,status=no,width=' + width +
+            ',height=' + height + ',left=' + left + ',top=' + top;
     return window.open(url, 'authPopup', windowFeatures);
 }
