@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def create
-    # raise env["omniauth.auth"].to_yaml
+    # Have a look at the info returned by the provider by uncommenting the next line:
+    # render text: "<pre>" + env["omniauth.auth"].to_yaml and return
     omniauth = env['omniauth.auth']
     user = User.find_or_create_with_omniauth(omniauth)
     session[:user_id] = user.id
