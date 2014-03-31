@@ -15,10 +15,10 @@ FACEBOOK_SECRET: CLASSIFIED
 GITHUB_KEY: CLASSIFIED
 GITHUB_SECRET: CLASSIFIED
 
-# Create your google app at https://code.google.com/apis/console
+# Create your google app at https://console.developers.google.com
 GOOGLE_KEY: CLASSIFIED
 GOOGLE_SECRET: CLASSIFIED
 
-# Create your twitter app at https://dev.twitter.com/apps
+# Create your twitter app at https://apps.twitter.com/
 TWITTER_KEY: CLASSIFIED
 TWITTER_SECRET: CLASSIFIED
