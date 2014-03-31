@@ -6,7 +6,7 @@ A simple example of how you could setup a pure OmniAuth login using a popup wind
 
 There are 6 steps involved:
 
-* [application_helper.rb](app/helpers/application_helper.rb) - A useful function that helps simplify the view. It adds a css class to be later used as a selector and adds some data attributes that determine the size of the popup.
+* [application_helper.rb](app/helpers/application_helper.rb) - A useful method that helps simplify the view. It adds a css class to be later used as a selector and adds some data attributes that determine the size of the popup.
 
 * [application.html.erb](app/views/layouts/application.html.erb) - The user clicks some "Login with Social Provider" button.
 
@@ -16,7 +16,7 @@ There are 6 steps involved:
 
 * [sessions_controller.rb](app/controllers/sessions_controller.rb) - A callback request hits our server. Here, the user account is searched for or created depending on whether this is the user's first time logging in or not. The `popup` param is checked for and if it exists that means the user has javascript enabled.
 
-* [callback.html.erb](app/views/sessions/callback.html.erb) - A view made of javascript closes the popup and redirects the main window to the url the user was trying to access. If the `popup` param was not present in the previous step, the server itself would make the redirection to the correct url.
+* [callback.html.erb](app/views/sessions/callback.html.erb) - A view made of javascript closes the popup and redirects the main window to the url the user was trying to access. If the `popup` param was not present in the previous step, our server would make the redirection to the correct url.
 
 ## How to run
 
@@ -29,13 +29,3 @@ Then follow the instructions on the file [application.template.yml](config/appli
 Finally, start a web server on port 3000 with:
 
     rails server
-
-## References
-
-* Create your Facebook app [here](https://developers.facebook.com/apps)
-
-* Create your GitHub app [here](https://github.com/settings/applications/new)
-
-* Create your Google app [here](https://code.google.com/apis/console)
-
-* Create your Twitter app [here](https://dev.twitter.com/apps)
