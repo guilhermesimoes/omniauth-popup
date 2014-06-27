@@ -6,8 +6,8 @@ gem 'rails', '4.0.6'
 gem 'rake', '~> 10.3'
 
 gem 'omniauth-facebook', '1.6'
-gem 'omniauth-github', '~> 1.1.1'
-gem 'omniauth-google-oauth2', '~> 0.2.1'
+gem 'omniauth-github', '~> 1.1.2'
+gem 'omniauth-google-oauth2', '0.2.4'
 gem 'omniauth-twitter', '~> 1.0.1'
 
 gem 'figaro', '~> 0.7.0'
