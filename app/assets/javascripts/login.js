@@ -6,7 +6,7 @@ $(document).ready(function() {
 });
 
 function centerPopup(linkUrl, width, height) {
-    var sep = (linkUrl.indexOf('?') != -1) ? '&' : '?',
+    var sep = (linkUrl.indexOf('?') !== -1) ? '&' : '?',
         url = linkUrl + sep + 'popup=true',
         left = (screen.width - width) / 2 - 16,
         top = (screen.height - height) / 2 - 50,
