@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
+gem 'rails', '4.0.6'
 gem 'rake', '~> 10.1.0'
-gem 'rails', '~> 4.0.3'
 
 gem 'omniauth-facebook', '1.6'
 gem 'omniauth-github', '~> 1.1.1'
